@@ -1,60 +1,34 @@
 package com.cursojava.curso.models;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Entity
+@Table(name = "usuarios")
 public class Usuario {
 
+    @Getter @Setter @Column(name = "id")
+    @Id
     private long id;
+
+    @Getter @Setter @Column(name = "nombre")
     private String nombre;
+
+    @Getter @Setter @Column(name = "apellido")
     private String apellido;
+
+    @Getter @Setter @Column(name = "contrasena")
     private String contrasena;
+
+    @Getter @Setter @Column(name = "telefono")
     private String telefono;
+
+    @Getter @Setter @Column(name = "email")
     private String email;
 
-    public String getNombre() {
-        return nombre;
-    }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
