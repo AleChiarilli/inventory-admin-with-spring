@@ -1,5 +1,6 @@
 package com.cursojava.curso.models;
 
+
 public class Usuario {
 
     private long id;
